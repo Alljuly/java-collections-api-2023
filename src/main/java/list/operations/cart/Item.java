@@ -1,4 +1,4 @@
-package main.java.list.operations;
+package main.java.list.operations.cart;
 
 public class Item {
     private String name;

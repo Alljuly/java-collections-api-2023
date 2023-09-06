@@ -1,6 +1,8 @@
-package main.java.list.operations;
+package main.java.list.operations.cart;
 
 import java.util.*;
+
+import main.java.list.operations.cart.Item;
 
 public class ShoppingCart {
 

@@ -1,4 +1,4 @@
-package main.java.list.operations;
+package main.java.list.operations.task;
 
 public class Task {
 	
