@@ -1,21 +1,20 @@
-package main.java.list.Search.books;
+package main.java.list.search.lib;
 
-import java.util.*;
-
-import main.java.list.Search.books.Book;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Library {
-    List<Book> bookList;
+    private List<Book> bookList;
 
     public Library() {
         this.bookList = new ArrayList<>();
     }
 
-    public void newBook(String author, String title, int yearRealesed) {
-        bookList.add(new Book(author, title, yearRealesed));
+    public void newBook(String title, String author, int yearRealesed) {
+        bookList.add(new Book(title, author, yearRealesed));
     }
 
-    public void searchAuthor(String author) {
+    public List<Book> searchAuthor(String author) {
         List<Book> searchB = new ArrayList<>();
         if (!bookList.isEmpty()) {
             for (Book b : bookList) {
@@ -23,13 +22,13 @@ public class Library {
                     searchB.add(b);
                 }
             }
-            System.out.println(searchB);
+            return searchB;
         } else {
             throw new RuntimeException("The list of books is empty!");
         }
     }
 
-    public void searchYearInterval(int initialValue, int finalValue) {
+    public List<Book> searchYearInterval(int initialValue, int finalValue) {
         List<Book> searchB = new ArrayList<>();
         if (!bookList.isEmpty()) {
             for (Book b : bookList) {
@@ -37,7 +36,7 @@ public class Library {
                     searchB.add(b);
                 }
             }
-            System.out.println(searchB);
+            return searchB;
         } else {
             throw new RuntimeException("The list of books is empty!");
         }
@@ -59,7 +58,14 @@ public class Library {
     }
 
     public static void main(String[] args) {
+
         Library lib = new Library();
+
+        lib.newBook("Código Limpo", "Robert C. Martin", 2009);
+
+        lib.searchAuthor("Robert C. Martin");
+        lib.searchTitle("Código Limpo");
+        lib.searchYearInterval(2000, 2010);
 
     }
 }

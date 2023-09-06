@@ -2,8 +2,6 @@ package main.java.list.operations.cart;
 
 import java.util.*;
 
-import main.java.list.operations.cart.Item;
-
 public class ShoppingCart {
 
     private List<Item> items;
@@ -71,7 +69,6 @@ public class ShoppingCart {
         cart.showItems();
 
         System.out.println("total: " + cart.totalEstimated());
-
 
         cart.removeItem("emo");
 

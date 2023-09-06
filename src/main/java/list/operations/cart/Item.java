@@ -39,7 +39,7 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
+        return "Item {" +
                 "name:'" + name + '\'' +
                 ", price:" + price +
                 ", amount:" + amount +
